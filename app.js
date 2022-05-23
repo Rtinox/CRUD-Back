@@ -1,4 +1,3 @@
-// db: crud:UFKrghmMVorgGehN
 var express = require('express');
 var path = require('path');
 
@@ -10,7 +9,6 @@ async function main() {
   console.log('Connected to MongoDB');
 }
 
-//var indexRouter = require('./routes/index');
 
 var app = express();
 
@@ -23,6 +21,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-//app.use('/', indexRouter);
+// Routes import
+var usersRoute = require('./routes/users');
+
+// Routes uses
+app.use('/users', usersRoute);
 
 module.exports = app;
