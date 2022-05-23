@@ -1,0 +1,25 @@
+{
+  "name": "crud-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rtinox/CRUD-Back.git"
+  },
+  "author": "Nathan (nathan.rouche@protonmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rtinox/CRUD-Back/issues"
+  },
+  "homepage": "https://github.com/Rtinox/CRUD-Back#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.3.4",
+    "path": "^0.12.7"
+  }
+}
