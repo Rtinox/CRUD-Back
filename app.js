@@ -9,6 +9,8 @@ async function main() {
   console.log('Connected to MongoDB');
 }
 
+const cors = require('cors')
+
 
 var app = express();
 
@@ -20,6 +22,14 @@ app.set('layout', 'index');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+
+
+var corsOptions = {
+  origin: '*',
+  optionsSuccessStatus: 200 // For legacy browser support
+}
+
+app.use(cors(corsOptions));
 
 // Routes import
 var usersRoute = require('./routes/users');
