@@ -3,14 +3,16 @@ var path = require('path');
 
 const mongoose = require('mongoose');
 
+/**
+ * Connexion à la base de données
+ */
 main().catch(err => console.log(err));
 async function main() {
   await mongoose.connect(process.env.MONGO_URL);
   console.log('Connected to MongoDB');
 }
 
-const cors = require('cors')
-
+const cors = require('cors');
 
 var app = express();
 
